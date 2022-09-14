@@ -1,0 +1,114 @@
+h1,
+p {
+  font-family: arial;
+}
+
+.imagess {
+  color: #333;
+  font-family: arial;
+  width: 200px;
+}
+
+.product-name {
+  font-size: 14px;
+}
+
+.price {
+  font-size: 10px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+  margin-top: 100px;
+}
+
+.carousel-viewport {
+  width: 100%;
+  display: flex;
+  flex-wrap: no-wrap;
+}
+
+.slide {
+  width: 25%;
+  flex-shrink: 0;
+  padding: 8px 8px 8px 8px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 450px) {
+  .carousel-wrapper {
+    width: 100%;
+  }
+  .slide {
+    width: 100%;
+  }
+}
+
+.carousel-window {
+  width: calc(100% - 130px);
+  overflow: hidden;
+}
+
+.sample-slide {
+  background: blue;
+  color: white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.control {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #999;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+  opacity: 0.8;
+}
+
+.control:hover {
+  opacity: 1;
+}
+
+
+.control.right:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  height: 8px;
+  width: 8px;
+  display: block;
+  transform: rotate(318deg);
+}
+
+.control.left {
+  margin-left: 15px;
+}
+
+.control.inactive {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.control.left:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  height: 8px;
+  width: 8px;
+  display: block;
+  transform: rotate(130deg);
+}
